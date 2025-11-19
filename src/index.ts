@@ -186,5 +186,78 @@ export {
   SerializedNamedExpression,
 }
 
-// Export lexo integration module
-export * as lexo from './lexo'
+// Export parser utilities and AST types for advanced usage
+export {
+  // Parser classes
+  ParserWithCaching,
+  FormulaLexer,
+  
+  // AST types and enums
+  Ast,
+  AstNodeType,
+  ParsingErrorType,
+  
+  // Specific AST node types
+  ProcedureAst,
+  NamedExpressionAst,
+  ErrorAst,
+  CellReferenceAst,
+  CellRangeAst,
+  StringAst,
+  NumberAst,
+  PowerOpAst,
+  PlusOpAst,
+  PlusUnaryOpAst,
+  MinusUnaryOpAst,
+  MinusOpAst,
+  TimesOpAst,
+  DivOpAst,
+  ConcatenateOpAst,
+  NotEqualOpAst,
+  LessThanOrEqualOpAst,
+  LessThanOpAst,
+  GreaterThanOpAst,
+  GreaterThanOrEqualOpAst,
+  EqualsOpAst,
+  ParenthesisAst,
+  PercentOpAst,
+  ColumnRangeAst,
+  RowRangeAst,
+  EmptyArgAst,
+  ArrayAst,
+  ErrorWithRawInputAst,
+  
+  // AST builder functions
+  buildProcedureAst,
+  buildCellRangeAst,
+  buildParsingErrorAst,
+  buildCellErrorAst,
+  buildNumberAst,
+  buildStringAst,
+  buildCellReferenceAst,
+  buildEmptyArgAst,
+  
+  // Address utilities
+  CellAddress,
+  cellAddressFromString,
+  simpleCellAddressFromString,
+  simpleCellAddressToString,
+  simpleCellRangeFromString,
+  simpleCellRangeToString,
+  
+  // Dependency types
+  RelativeDependency,
+  AddressDependency,
+  CellRangeDependency,
+  ColumnRangeDependency,
+  RowRangeDependency,
+  NamedExpressionDependency,
+  collectDependencies,
+  
+  // Unparser
+  Unparser,
+  
+  // Lexer config
+  buildLexerConfig,
+} from './parser'
+
