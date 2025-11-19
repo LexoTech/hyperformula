@@ -46,6 +46,8 @@ export {
   NumberAst,
   MinusUnaryOpAst,
   MinusOpAst,
+  TimesOpAst,
+  DivOpAst,
   ConcatenateOpAst,
   NotEqualOpAst,
   LessThanOrEqualOpAst,
@@ -53,11 +55,22 @@ export {
   GreaterThanOpAst,
   GreaterThanOrEqualOpAst,
   EqualsOpAst,
+  ParenthesisAst,
+  PercentOpAst,
+  ColumnRangeAst,
+  RowRangeAst,
+  EmptyArgAst,
+  ArrayAst,
+  ErrorWithRawInputAst,
 
   buildProcedureAst,
   buildCellRangeAst,
   buildParsingErrorAst,
   buildCellErrorAst,
+  buildNumberAst,
+  buildStringAst,
+  buildCellReferenceAst,
+  buildEmptyArgAst,
 } from './Ast'
 
 export {Unparser} from './Unparser'
